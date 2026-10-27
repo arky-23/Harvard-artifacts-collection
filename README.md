@@ -1,46 +1,55 @@
 # Harvard's Artifacts Collection
 
-This is my Data Science project based on the Harvard Art Museums collection. I used the Harvard Art Museums API to collect artifact data, stored it in MySQL, and built a Streamlit app to explore the data and run SQL queries.
+An interactive, end-to-end ETL and data exploration platform built using the Harvard Art Museums public API.
 
-## What I worked on
+This project collects artifact data from the Harvard Art Museums API, transforms the API responses into structured records, stores the data in MySQL, and provides an interactive Streamlit application to explore the collection and run SQL queries.
 
-- Collected artifact data from the Harvard Art Museums API.
-- Worked with four classifications: Coins, Paintings, Sculpture, and Photographs.
-- Separated the collected data into three tables: metadata, media, and colors.
-- Connected Python with MySQL to store the data.
-- Built a Streamlit app to collect and display artifacts and insert the data into MySQL.
-- Added 25 SQL questions to explore the collection and understand the data better.
+## Project Features
 
-## Tools I used
+- **API Integration:** Collects artifact data from the Harvard Art Museums public API.
+- **ETL Pipeline:** Extracts data from API responses, transforms it into structured records, and loads it into MySQL.
+- **Data Transformation:** Organizes artifact information into metadata, media, and color records.
+- **Database Design:** Stores the data in three MySQL tables: `artifact_metadata`, `artifact_media`, and `artifact_colors`.
+- **Interactive Data Exploration:** Uses Streamlit to collect, display, and explore artifact data.
+- **SQL Analytics:** Includes 25 predefined SQL queries covering artifact details, classifications, departments, media, rankings, and color analysis.
+
+## Technologies Used
 
 - Python
-- Streamlit
-- MySQL
 - Pandas
 - Requests
+- MySQL
+- SQL
+- Streamlit
 - Harvard Art Museums API
 
-## Database tables
+## Database Tables
 
-- `artifact_metadata` – stores details such as title, culture, period, medium, and classification.
-- `artifact_media` – stores image counts, media counts, color counts, and ranking information.
-- `artifact_colors` – stores the color information associated with artifacts.
+- `artifact_metadata` — Stores artifact details such as title, culture, period, medium, and classification.
+- `artifact_media` — Stores image counts, media counts, color counts, and ranking information.
+- `artifact_colors` — Stores color information associated with artifacts.
 
-## Data collected
+## Data Collected
 
-I collected 2,500 records from each of the four classifications, giving me a total of 10,000 artifact records.
+The current dataset contains 10,000 artifact records across four classifications:
 
-## How to run the app
+- Coins
+- Paintings
+- Sculpture
+- Photographs
 
-1. Install the required Python packages.
-2. Set up MySQL and configure the database credentials and API key in the environment variables.
-3. Open the project folder in the terminal.
-4. Run the following command:
+Each classification contains 2,500 artifact records.
 
-```bash
-streamlit run APP.py
-```
+## How to Run the Application
 
-## What I learned
+1. Install Python and the required packages.
+2. Set up MySQL and create the required database.
+3. Configure the Harvard API key and database credentials using environment variables in a `.env` file.
+4. Open the project folder in the terminal.
+5. Run the application:
 
-Through this project, I got practical experience working with APIs, handling data in Python, creating MySQL tables, inserting records, writing SQL queries, and building a simple web app using Streamlit.
+   `streamlit run APP.py`
+
+## What I Learned
+
+Through this project, I gained practical experience working with API integration, data extraction and transformation, MySQL database design, SQL queries, and building an interactive application using Streamlit.
